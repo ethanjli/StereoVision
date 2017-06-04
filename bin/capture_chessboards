@@ -59,6 +59,7 @@ def main():
     progress = ProgressBar(maxval=args.num_pictures,
                           widgets=[Bar("=", "[", "]"),
                           " ", Percentage()])
+    progress.maxval = args.num_pictures
     if not os.path.exists(args.output_folder):
         os.makedirs(args.output_folder)
     progress.start()
